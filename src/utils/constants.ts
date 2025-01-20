@@ -1,33 +1,65 @@
-// Default model settings
-export const DEFAULT_MODEL = 'claude-2'
-export const DEFAULT_MAX_TOKENS = 4096
-export const DEFAULT_TEMPERATURE = 0.7
+// API Endpoints
+export const API_BASE_URL = 'https://api.agentport.fun';
+export const API_VERSION = 'v1';
 
-// API endpoints and versions
-export const API_VERSION = 'v1'
-export const BASE_URL = 'https://api.anthropic.com'
+// HTTP Methods
+export const HTTP_METHODS = {
+  GET: 'GET',
+  POST: 'POST',
+  PUT: 'PUT',
+  DELETE: 'DELETE',
+  PATCH: 'PATCH'
+} as const;
 
-// Message roles
-export const SYSTEM_ROLE = 'system'
-export const USER_ROLE = 'user'
-export const ASSISTANT_ROLE = 'assistant'
+// HTTP Status Codes
+export const HTTP_STATUS = {
+  OK: 200,
+  CREATED: 201,
+  BAD_REQUEST: 400,
+  UNAUTHORIZED: 401,
+  FORBIDDEN: 403,
+  NOT_FOUND: 404,
+  INTERNAL_SERVER_ERROR: 500
+} as const;
 
-// Common status codes
-export const SUCCESS_CODE = 200
-export const ERROR_CODE = 400
+// Request Headers
+export const HEADERS = {
+  CONTENT_TYPE: 'Content-Type',
+  AUTHORIZATION: 'Authorization',
+  ACCEPT: 'Accept'
+} as const;
 
-// Rate limiting constants
-export const MAX_RETRIES = 3
-export const RETRY_DELAY = 1000 // milliseconds
+// Content Types
+export const CONTENT_TYPES = {
+  JSON: 'application/json',
+  FORM_DATA: 'multipart/form-data',
+  TEXT: 'text/plain'
+} as const;
 
-// Anthropic specific constants
-export const ANTHROPIC_MAX_TOKENS = 100000
-export const ANTHROPIC_DEFAULT_MODEL = Anthropic.HUMAN_PROMPT
+// Default Request Timeout (in milliseconds)
+export const DEFAULT_TIMEOUT = 30000;
 
-// Timeout settings
-export const REQUEST_TIMEOUT = 30000 // milliseconds
-export const STREAM_TIMEOUT = 60000 // milliseconds
+// Rate Limiting
+export const RATE_LIMIT = {
+  MAX_REQUESTS: 100,
+  TIME_WINDOW: 60000 // 1 minute in milliseconds
+} as const;
 
-// Buffer sizes
-export const DEFAULT_CHUNK_SIZE = 1024
-export const MAX_BUFFER_SIZE = 10485760 // 10MB
+// Error Messages
+export const ERROR_MESSAGES = {
+  NETWORK_ERROR: 'Network error occurred',
+  TIMEOUT_ERROR: 'Request timed out',
+  UNAUTHORIZED: 'Unauthorized access',
+  INVALID_TOKEN: 'Invalid API token',
+  RATE_LIMIT_EXCEEDED: 'Rate limit exceeded'
+} as const;
+
+// SDK Version
+export const SDK_VERSION = '1.0.0';
+
+// Cache Duration (in milliseconds)
+export const CACHE_DURATION = {
+  SHORT: 5 * 60 * 1000,    // 5 minutes
+  MEDIUM: 30 * 60 * 1000,  // 30 minutes
+  LONG: 60 * 60 * 1000     // 1 hour
+} as const;
