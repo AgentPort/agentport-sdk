@@ -1,5 +1,5 @@
 {
-  "name": "ai-instruction-manager",
+  "name": "agentport-sdk",
   "version": "1.0.0",
   "scripts": {
     "test": "jest",
